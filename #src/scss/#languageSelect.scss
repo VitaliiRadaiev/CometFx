@@ -1,0 +1,94 @@
+//<SELECT (sel+tab)>====================================================================================================
+.select {
+	position: relative;
+	// .select__item
+	&__item {
+		position: relative;
+	}
+	// .select__title
+	&__title {
+		cursor: pointer;
+	}
+	// .select__value
+	&__value {
+		display: flex;
+		font-size: 1.8rem;
+		padding: 0px 0rem 0 2.5rem;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row-reverse;
+		position: relative;
+		span {
+			height: 1em;
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+		}
+		&:before {
+			content: "";
+			display: inline-block;
+			transition: all 0.3s ease 0s;
+			width: 1.2rem;
+			height: 0.65rem;
+			background: url("../img/icons/arrow-down.svg") center / 100% no-repeat;
+			margin-left: 0.5rem;
+
+		}
+		&:after {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			background: url("../img/icons/globe.svg") center / 100% no-repeat;
+			height: 1.5rem;
+			width: 1.5rem;
+		}
+	}
+	&__input {
+		width: 100%;
+		background-color: transparent;
+		height: 100%;
+	}
+	// .select__options
+	&__options {
+		color: #000;
+		display: none;
+		position: absolute;
+		top: 3rem;
+		min-width: 100%;
+		left: 0;
+		background-color: $mainColor;
+		border-top: 0;
+		border: 1px solid #979797;
+		letter-spacing: 0.2rem;
+		color: #textColor;
+		font-size: 1.8rem;
+		max-height: 40rem;
+		overflow: auto;
+		text-align: center;
+	}
+	// .select__option
+	&__option {
+		cursor: pointer;
+		padding: 1.5rem;
+		@media (min-width: 992px) {
+			&:hover {
+				background: rgba(#fff, 0.1);
+			}
+		}
+	}
+	&._active {
+		z-index: 5;
+		.select__value {
+			&:before {
+				transform: rotate(-180deg);
+			}
+		}
+		.select__options {
+			display: block;
+		}
+	}
+}
+//</SELECT>====================================================================================================

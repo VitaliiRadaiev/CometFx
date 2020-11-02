@@ -1,0 +1,300 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+html {
+	font-size: 10px;
+}
+html,
+body {
+	height: 100%;
+	min-width: $minwidth;
+	margin: 0 auto;
+}
+body {
+	line-height: 1;
+	font-family: $mainFontFamily;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	color: #000;
+	font-size: 1.6rem;
+	font-family: $mainFontFamily;
+	background: $mainColor;
+
+
+	&.lock {
+		overflow: hidden;
+	}
+
+}
+
+input,
+button,
+textarea {
+	font-family: $mainFontFamily;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+// 	font-weight: inherit;
+// 	font-size: inherit;
+// }
+
+.wrapper {
+	flex: 1 1 auto;
+	position: relative;
+	color: #fff;
+	font-size: 1.8rem;
+	width: 100%;
+}
+
+.aside {
+	min-width: 0;
+	width: 285px;
+	position: fixed;
+	&__inner {
+		background: $mainColor;
+		overflow: auto;
+		height: calc(100vh - 9.3rem);
+
+		@media (max-width: $md2+px) {
+			height: 100%;
+			width: 28.5rem;
+		}
+	}
+
+	&.open {
+		left: 0rem;
+
+		& .aside__inner {
+			overflow-y: auto;
+		}
+
+		& .aside__btn {
+			& span {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__btn {
+		position: absolute;
+		top: 0;
+		right: -30px;
+		width: 3rem;
+		height: 2.8rem;
+		background: $mainColor;
+		border: 1px solid $decorColor;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $decorColor;
+		cursor: pointer;
+		visibility: visible;
+		opacity: 1;
+		transition: all .2s ease;
+
+		@media (min-width: 992px) {
+			display: none;
+		}
+	}
+
+	@media (max-width: $md2+px) {
+		position: absolute;
+		top: 0;
+		left: -28.5rem;
+		height: 100%;
+		z-index: 3;
+		transition: all .4s ease;
+	}
+
+}
+.main {
+	overflow: hidden;
+	position: relative;
+	margin-left: 285px;
+
+	&__slider {
+		background: url(../img/photo/main-bg.jpg) center no-repeat;
+		background-size: cover;
+		min-height: calc(100vh - 9.3rem);
+		display: flex;
+		align-items: center;
+	}
+}
+
+
+.container {
+	max-width: 123.2rem;
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 1.5rem;
+
+}
+
+.ibg {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+
+.logo {
+	max-width: 23rem;
+	width: 100%;
+
+	& img {
+		width: 100%;
+	}
+}
+
+
+
+// === title ========================================================================
+.title-1 {
+	font-family: $mainFontFamily;
+	font-size: 4.5rem;
+	line-height: 1.17em;
+	text-transform: uppercase;
+	font-weight: 400;
+
+	@media (max-width: $md3+px) {
+		font-size: 3.2rem;
+	}
+}
+.title-2 {
+
+}
+
+.title-3 {
+	font-family: $mainFontFamily;
+	color: $textColor;
+	font-size: 2.4rem;
+	line-height: 1.16em;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+.suptitle {
+
+}
+// === and title ========================================================================
+
+
+
+// === btn ========================================================================
+.btn-default {
+	display: inline-block;
+	position: relative;
+	border: 1px solid $decorColor;
+	color: $decorColor;
+	font-family: $seconFontFamily;
+	font-weight: 300;
+	font-size: 1.4rem;
+	line-height: 1.28em;
+	text-transform: uppercase;
+	white-space: nowrap;
+	padding: 0.71em 2em 1em;
+	transition: all .2s ease;
+
+	& > span {
+		position: relative;
+		z-index: 2;
+	}
+
+	@media (min-width: 992px) {
+		&:hover {
+			color: $mainColor;
+
+			&:after {
+				height: 100%;
+				opacity: 0.8;
+			}
+		}
+	}
+
+	&:after {
+		position: absolute;
+		content: '';
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 0.21em;
+		transition: all .2s ease;
+		background: $decorColor;
+		z-index: 1;
+	}
+}
+
+// === and btn ========================================================================
+
+.link {
+	font-family: $seconFontFamily;
+	color: $decorColor;
+	font-weight: bold;
+	font-size: 1.4rem;
+	line-height: 1.28em;
+	text-decoration: underline;
+	transition: all .2s ease;
+
+	@media (min-width: 992px) {
+		&:hover {
+			color: rgba($decorColor, 0.5);
+			text-decoration: underline;
+		}
+	}
+}

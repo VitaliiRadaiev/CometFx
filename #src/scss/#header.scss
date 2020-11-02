@@ -1,0 +1,99 @@
+.header {
+	position: relative;
+	z-index: 50;
+	&__body {
+		background: $mainColor;
+		display: flex;
+		align-items: center;
+		padding: 0rem 2.8rem;
+		min-height: 9.3rem;
+		position: relative;
+
+		@media (max-width: $md2+px) {
+			padding: 0rem 1.5rem;
+		}
+
+		& * {
+			color: $textColor;
+		}
+	}
+	&__logo {
+		margin-right: 3.6rem;
+
+		@media (max-width: $md4+px) {
+			margin-right: 6.6rem;
+			&.logo {
+				max-width: 16rem;
+			}
+		}
+	}
+
+	&__menu {}
+	&__language {
+		margin-left: auto;
+	}
+	&__burger {
+		margin-left: 2rem;
+		@media (min-width: 992px) {
+			display: none;
+		}
+	}
+}
+
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1rem;
+
+	@media (max-width: 1280px) {
+		font-size: 0.8rem;
+	}
+
+	@media (max-width: $md2+px) {
+		font-size: 1rem;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background: $mainColor;
+		display: none;
+		text-align: center;
+		padding: 1rem 1.5rem 3rem;
+	}
+
+	@media (min-width: 992px) {
+		display: flex !important;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 1.7em;
+
+			@media (max-width: $md2+px) {
+				margin-right: 0;
+			}
+		}
+
+		& > a {
+			display: inline-block;
+			font-size: 1.8em;
+			line-height: 2.1em;
+			padding: 0.5em 1.2em;
+			transition: all .2s ease;
+
+			&.active {
+				color: $decorColor;
+			}
+
+			@media (min-width: 992px) {
+				&:hover {
+					background: rgba(#fff, 0.1);
+				}
+			}
+		}
+	}
+}
+
+.language {
+	&__select {}
+}
