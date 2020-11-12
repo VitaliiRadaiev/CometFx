@@ -51,4 +51,37 @@
 			}
 		}
 	}
+
+	&_forex {
+		& .product__content {
+			& p ~ h2 {
+				margin-top: 2.7em;
+			}
+
+			& .container {
+				& ul > li {
+					margin-bottom: 0em;
+				}
+			}
+
+		}
+	}
+
+	&_spot-metals {
+		& .product__content {
+			& p ~ h2 {
+				margin-top: 1.5em;
+			}
+		}
+	}
+
+	&_indices {
+		& .product__content {
+			& p ~ h2 {
+				margin-top: 2.5em;
+				text-align: center;
+			}
+
+		}
+	}
 }

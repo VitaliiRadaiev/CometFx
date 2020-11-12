@@ -117,6 +117,7 @@
 
 		& ul {
 			& > li {
+
 				margin-bottom: 1em;
 				color: #F8F8F8;
 				font-family: $seconFontFamily;
@@ -125,11 +126,38 @@
 				line-height: 1.3433em;
 				margin-bottom: 0.666em;
 				min-height: 1em;
+
+				&:before {
+					content: '•';
+				}
 			}
 		}
+
+		& ol {
+			list-style: none;
+			margin: 1.8em 0;
+
+			& > li {
+				margin-bottom: 1em;
+				color: #F8F8F8;
+				font-family: $seconFontFamily;
+				font-weight: 300;
+				font-size: 1.5em;
+				line-height: 1.3433em;
+				margin-bottom: 0.666em;
+				min-height: 1em;
+
+				& > strong {
+					font-weight: 700;
+					color: $decorColor;
+				}
+
+			}
+
+		}
+
 	}
 }
-
 
 
 

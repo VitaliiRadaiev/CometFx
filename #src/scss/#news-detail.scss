@@ -3,6 +3,30 @@
 		padding-left: 30px;
 		padding-right: 30px;
 
+		& h3 {
+			margin-top: 1.7em;
+		}
+
+		& > p {
+
+			& ~ h5 {
+				margin-top: 3.2em;
+			}
+		}
+
+		& .social {
+			margin-top: 8em;
+		}
+
+		& > ul > li{
+			&:before {
+				content: '•';
+			}
+		}
+
+		@media (max-width: $md3+px) {
+			margin-top: 5em;
+		}
 
 		@media (max-width: 575+px) {
 			padding-left: 15px;

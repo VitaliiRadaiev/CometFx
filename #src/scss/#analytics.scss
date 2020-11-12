@@ -24,8 +24,16 @@
 			width: 74%;
 		}
 	}
+	&_fundamental {
+		& .block-text-img  {
+			margin-bottom: 0;
+		}
+	}
 
 	&_technical {
+		& .block-text-img  {
+			margin-bottom: 0;
+		}
 
 		@media (max-width: $md2+px) {
 			& .block-text-img {
@@ -41,6 +49,9 @@
 	}
 
 	&_economic {
+		& .block-text-img  {
+			margin-bottom: 1em;
+		}
 		& .list-column-3 {
 			& .icon {
 				height: 6.6em;
