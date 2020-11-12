@@ -1,0 +1,142 @@
+.mews-detail {
+	& .container {
+		padding-left: 30px;
+		padding-right: 30px;
+
+
+		@media (max-width: 575+px) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+	}
+	&__come-back {
+		margin: 64px 0 120px;
+
+		@media (max-width: $md2+px) {
+			margin: 141px 0 45px;
+		}
+	}
+	&__content {
+		margin-bottom: 41px;
+	}
+	&__related-terms {
+		font-size: 10px;
+		margin-bottom: 80px;
+
+		& h2 {
+			font-size: 3em;
+			line-height: 1.166em;
+			margin-bottom: 0.5433em;
+			font-weight: 300;
+			text-transform: uppercase;
+		}
+
+		& .news-list {
+			margin-top: 16px;
+		}
+	}
+
+	& .text-content {
+		& ul > li {
+			margin-bottom: 0.56em;
+		}
+		& .container {
+			& > h2:first-child {
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	& table {
+		margin: 0 0 0.5em;
+
+		& tr {
+			&:first-child {
+				& th {
+					background: rgba(#E3B04B , 0.3);
+					height: 4em;
+					vertical-align: middle;
+					font-family: $seconFontFamily;
+					font-weight: 500;
+					font-size: 1.5em;
+					line-height: 1.333em;
+					color: #E3B04B;
+					text-transform: none;
+
+					&:first-child {
+						text-align: left;
+					}
+				}
+			}
+		}
+
+		& td {
+			width: 20%;
+			text-transform: none;
+			height: 5.9em;
+
+			&:first-child {
+				text-align: left;
+			}
+		}
+	}
+}
+
+.link-come-back {
+	display: inline-flex;
+	align-items: center;
+	font-size: 16px;
+	line-height: 19px;
+	color: #F8F8F8;
+	opacity: 0.5;
+	font-weight: 300;
+	transition: all .2s ease;
+
+	@media (min-width: 992px) {
+		&:hover {
+			color: $decorColor;
+			opacity: 1;
+		}
+	}
+
+
+	&:before {
+		font-family: 'icomoon';
+		content: "\f104";
+		font-size: 18px;
+		margin-right: 5px;
+	}
+}
+
+.article-info {
+	font-family: $seconFontFamily;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 1.3em;
+	line-height: 1.3em;
+	color: rgba(#F8F8F8, 0.6);
+	margin: 1.1em 0;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+
+	&__date {
+		margin-bottom: 0.76em;
+		margin-right: 2.30em;
+		display: flex;
+		& > span {
+			margin-left: 1.38em;
+		}
+	}
+
+	&__authtor {
+		display: flex;
+		margin-bottom: 0.76em;
+
+		& > span {
+			margin-left: 1.38em;
+		}
+	}
+}

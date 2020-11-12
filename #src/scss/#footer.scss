@@ -1,0 +1,311 @@
+.footer {
+	padding: 35px 0 30px;
+	margin-left: 285px;
+
+	@media (max-width: $md2+px) {
+		margin-left: 0;
+		padding: 39px 0 30px;
+	}
+
+	&__top{
+		display: flex;
+		padding-left: 10px;
+
+		@media (max-width: $md2+px) {
+			flex-wrap: wrap;
+		}
+
+		@media (max-width: $md3+px) {
+			padding-left: 18px;
+		}
+
+		@media (max-width: 520px) {
+			display: block
+		}
+
+		& .item {
+			flex: 0 1 25%;
+			padding: 15px 4px;
+			display: flex;
+			align-items: center;
+
+
+			@media (max-width: $md2+px) {
+				flex: 0 1 50% !important;
+				padding: 9px 4px;
+			}
+
+			@media (max-width: 520px) {
+				justify-content: flex-start !important;
+			}
+
+			&:nth-child(2) {
+				flex: 0 1 27.5%;
+
+				@media (max-width: $md2+px) {
+					justify-content: flex-end;
+					padding-right: 10%;
+				}
+
+				@media (max-width: $md2+px) {
+					padding-right: 3.5%;
+				}
+			}
+
+			&:nth-child(3) {
+				flex: 0 1 17%;
+			}
+
+			&:nth-child(4) {
+				flex: 0 1 30.5%;
+
+				@media (max-width: $md2+px) {
+					justify-content: flex-end;
+					padding-right: 10%;
+				}
+
+				@media (max-width: $md2+px) {
+					padding-right: 3.5%;
+				}
+			}
+
+
+			& .icon {
+				flex: 0 0 auto;
+				margin-right: 8px;
+			}
+
+			& .inner {
+				flex: 1 1 auto;
+				max-width: 197px;
+			}
+
+			& a {
+				font-family: $seconFontFamily;
+				font-weight: 500;
+				font-size: 13px;
+				line-height: 17px;
+				color: #F8F8F8;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			& p {
+				font-family: $seconFontFamily;
+				font-weight: 500;
+				font-size: 13px;
+				line-height: 17px;
+				color: #F8F8F8;
+			}
+		}
+	}
+	&__label {
+		font-family: Roboto;
+		font-size: 13px;
+		line-height: 15px;
+		margin-bottom: 1px;
+		margin-top: 2px;
+		color: #E3B04B;
+	}
+	&__center {
+		display: flex;
+		padding-left: 15px;
+		margin-top: -3px;
+
+		@media (max-width: $md2+px) {
+			margin-top: 4px;
+			padding-left: 23px;
+		}
+
+		@media (max-width: $md3+px) {
+			margin-top: 1px;
+			padding-left: 18px;
+		}
+
+		@media (max-width: $md4+px) {
+			flex-direction: column-reverse;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		& .statement {
+			flex: 1 1 auto;
+			margin-right: 10px;
+
+			@media (max-width: $md2+px) {
+				margin-right: 7.5%;
+			}
+
+			@media (max-width: $md3+px) {
+				margin-right: 0.5%;
+			}
+		}
+	}
+	&__nav {
+		flex: 0 0 auto;
+		padding: 0 15px 0 27px;
+		margin-top: 26px;
+
+		@media (max-width: $md2+px) {
+			flex: 0 0 180px;
+			padding: 0px 15px 0 22px;
+			margin-top: 36px;
+		}
+
+		@media (max-width: $md3+px) {
+			flex: 0 0 162px;
+		    padding: 0 15px 0 14px;
+		    margin-top: 20px;
+		}
+
+		& > ul {
+			& > li {
+				margin-bottom: 16px;
+
+				@media (max-width: $md2+px) {
+					margin-bottom: 24px;
+				}
+
+				& > a {
+					font-family: $seconFontFamily;
+					font-weight: 300;
+					font-size: 13px;
+					line-height: 17px;
+					color: #F8F8F8;
+					white-space: nowrap;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+	&__bottom {}
+	&__copy {
+		margin: 25px 0;
+		font-family: $seconFontFamily;
+		font-weight: 300;
+		font-size: 13px;
+		line-height: 17px;
+		color: #F8F8F8;
+		text-align: center;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.statement {
+
+	&__title {
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 16px;
+		text-transform: capitalize;
+		color: #E3B04B;
+		padding: 2px 4px 2px 14px;
+		position: relative;
+		background: #000;
+		display: inline-block;
+		transform: translate(20px, 10px);
+		z-index: 3;
+
+		@media (max-width: $md2+px) {
+			font-size: 18px;
+			transform: translate(65px, 10px);
+		}
+
+		@media (max-width: $md2+px) {
+			font-size: 18px;
+			transform: translate(20px, 10px);
+		}
+
+		&:before {
+			position: absolute;
+			content: '';
+			height: 6px;
+			width: 6px;
+			border-radius: 50%;
+			background: rgba($decorColor, 0.6);
+			left: 4px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	
+	&__inner {
+		border: 1px solid $decorColor;
+		padding: 10px 20px 27px; 
+		overflow: hidden;
+		max-height: 163px;
+		position: relative;
+		transition: all .4s ease;
+
+		&.is-open {
+			&:after {
+				background: transparent;
+			}
+
+			& .statement__btn-close {
+				&:before {
+					transform: translateY(-50%) rotate(-90deg);
+				}
+			}
+		}
+
+		&:after {
+			position: absolute;
+			content: '';
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 67px;
+			transition: all .4s ease;
+			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+1,000000+1,000000+9,000000+87,000000+100&0+0,0+0,1+56 */
+			background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.02) 1%, rgba(0,0,0,0.16) 9%, rgba(0,0,0,1) 56%, rgba(0,0,0,1) 87%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.02) 1%,rgba(0,0,0,0.16) 9%,rgba(0,0,0,1) 56%,rgba(0,0,0,1) 87%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.02) 1%,rgba(0,0,0,0.16) 9%,rgba(0,0,0,1) 56%,rgba(0,0,0,1) 87%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+		}
+
+		@media (max-width: $md2+px) {
+			padding: 19px 17px 27px;
+		}
+
+		& p {
+			font-family: $seconFontFamily;
+			font-weight: 300;
+			font-size: 13px;
+			line-height: 17px;
+			color: #F8F8F8;
+		}
+	}
+	&__btn-close {
+		color: $decorColor;
+		font-family: $seconFontFamily;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 13px;
+		line-height: 17px;
+		padding-right: 12px;
+		position: relative;
+		margin-top: 10px;
+		display: inline-block;
+		position: absolute;
+		left: 20px;
+		bottom: 5px;
+		z-index: 5;
+		cursor: pointer;
+
+		&:before {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%) rotate(90deg);
+		}
+	}
+}

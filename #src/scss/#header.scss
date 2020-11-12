@@ -1,16 +1,98 @@
+
+.head-mobile {
+	display: flex;
+	min-height: 12em;
+	align-items: center;
+	font-size: 10px;
+	justify-content: space-between;
+	padding: 0 15px;
+
+	&.background {
+		background: rgba(#000, 0.8);
+	}
+
+	@media (max-width: $md3+px) {
+		min-height: 8em;
+	}
+
+	@media (min-width: 992px) {
+		display: none;
+	}
+}
+.head-mobile__btn-left {
+	flex: 0 0 auto;
+	background: transparent;
+	padding: 15px;
+
+	& > span {
+		display: block;
+		width: 3.3em;
+		height: 3.3em;
+		background: url(../img/icons/menu-left.svg) center no-repeat;
+		background-size: contain;
+	}
+}
+.head-mobile__logo {
+	flex: 0 1 100%;
+	max-width: 230px;
+	position: relative;
+
+	& a {
+		position: absolute;
+		left: 0;
+		height: 164px;
+		top: -80px;
+	}
+}
+.head-mobile__btn-right {
+	flex: 0 0 auto;
+	background: transparent;
+	padding: 15px;
+	& > span {
+		display: block;
+		width: 3.3em;
+		height: 3.3em;
+		background: url(../img/icons/gamburger-menu.svg) center no-repeat;
+		background-size: contain;
+	}
+}
+
 .header {
 	position: relative;
 	z-index: 50;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	&__mobile-head {}
+
 	&__body {
 		background: $mainColor;
 		display: flex;
 		align-items: center;
 		padding: 0rem 2.8rem;
-		min-height: 9.3rem;
+		//min-height: 9.3rem;
 		position: relative;
 
 		@media (max-width: $md2+px) {
-			padding: 0rem 1.5rem;
+			position: fixed;
+			top: 0;
+			right: 0;
+			z-index: 55;
+			width: 100%;
+			max-width: 393px;
+			flex-direction: column;
+			padding: 0;
+			height: 100vh;
+			align-items: flex-start;
+			right: -100%;
+			transition: all .4s ease;
+			overflow: auto;
+
+			&.open {
+				right: 0;
+			}
 		}
 
 		& * {
@@ -18,7 +100,33 @@
 		}
 	}
 	&__logo {
-		margin-right: 3.6rem;
+		margin-right: 2.6rem;
+		position: relative;
+		overflow: hidden;
+	    width: 100%;
+	    max-width: 229px;
+	    height: 45px;
+
+	    & a {
+	    	position: absolute;
+	    	left: 0;
+	    	height: 164px;
+	    	top: -55px;
+	    }
+
+		@media (max-width: $md2+px) {
+			display: none;
+		}
+
+/*		& lottie-playe {
+			background: transparent;
+			position: relative;
+			top: -50px;
+			left: 0;
+			width: 100%;
+			height: 144px;
+			transform: translateY(0);
+		}*/
 
 		@media (max-width: $md4+px) {
 			margin-right: 6.6rem;
@@ -31,9 +139,26 @@
 	&__menu {}
 	&__language {
 		margin-left: auto;
+
+		@media (max-width: $md2+px) {
+			margin-left: 10px;
+		}
 	}
-	&__burger {
-		margin-left: 2rem;
+	&__close {
+		margin-left: auto;
+		background: transparent;
+		padding: 1.5em;
+		font-size: 10px;
+		margin-top: 2.9em;
+		margin-right: 2em;
+		margin-bottom: 0.5em;
+		& > span {
+			display: block;
+			width: 3.3em;
+			height: 3.3em;
+			background: url(../img/icons/close-icon.svg) center no-repeat;
+			background-size: contain;
+		}
 		@media (min-width: 992px) {
 			display: none;
 		}
@@ -43,22 +168,15 @@
 .menu {
 	display: flex;
 	flex-wrap: wrap;
-	font-size: 1rem;
+	font-size: 10px;
 
-	@media (max-width: 1280px) {
-		font-size: 0.8rem;
+	@media (max-width: 1220px) {
+		font-size: 8px;
 	}
 
 	@media (max-width: $md2+px) {
-		font-size: 1rem;
-		position: absolute;
-		top: 100%;
-		left: 0;
+		display: block;
 		width: 100%;
-		background: $mainColor;
-		display: none;
-		text-align: center;
-		padding: 1rem 1.5rem 3rem;
 	}
 
 	@media (min-width: 992px) {
@@ -66,11 +184,15 @@
 	}
 
 	&__item {
+		position: relative;
 		&:not(:last-child) {
-			margin-right: 1.7em;
+			//margin-right: 1.7em;
 
 			@media (max-width: $md2+px) {
 				margin-right: 0;
+				&:not(:last-child) {
+					border-bottom: 2px solid #000;
+				}
 			}
 		}
 
@@ -78,22 +200,113 @@
 			display: inline-block;
 			font-size: 1.8em;
 			line-height: 2.1em;
-			padding: 0.5em 1.2em;
+			padding: 1.54em 1.7em;
 			transition: all .2s ease;
+			height: 100%;
 
 			&.active {
 				color: $decorColor;
 			}
 
-			@media (min-width: 992px) {
-				&:hover {
-					background: rgba(#fff, 0.1);
+			@media (max-width: $md2+px) {
+				display: block;
+				padding: 13px 65px 16px 28px;
+				position: relative;
+				font-size: 2.2em;
+				&:before {
+					position: absolute;
+					font-family: 'icomoon';
+					content: "\f105";
+					color: #fff;
+					font-size: 16px;
+					top: 50%;
+					right: 36px;
+					transform: translateY(-50%) rotate(90deg);
+				}
+
+				&._active {
+					color: $decorColor;
+
+					&:before {
+						color: $decorColor;
+						transform: translateY(-50%) rotate(-90deg);
+					}
+				}
+			}
+
+		}
+
+		@media (min-width: 992px) {
+			&:hover {
+				& > a {
+					background: #000;
+					color: $decorColor;
+				}
+				& .menu__submenu {
+					opacity: 1;
+					transform: translateY(0px);
+					pointer-events: auto;
 				}
 			}
 		}
 	}
+
+
+	&__submenu {
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		top: 100%;
+		background: #000;
+		padding: 9px 19px 10px;
+		transform: translateY(20px);
+		transition: all .4s ease;
+		pointer-events: none;
+
+		@media (min-width: 992px) {
+			display: block !important;
+		}
+
+		@media (max-width: $md2+px) {
+			position: static;
+			overflow: visible;
+			opacity: 1;
+			padding: 0;
+			transform: translateY(0);
+			background: transparent;
+			margin-top: -17px;
+			display: none;
+
+			& >li {
+				& > a {
+					display: block;
+					padding: 16px 65px 16px 28px;
+					position: relative;
+					font-size: 2em;
+
+				}
+			}
+
+		}
+
+		& > li {
+
+			& > a {
+				font-size: 16px;
+				line-height: 19px;
+				color: #F8F8F8;
+				transition: all .2s ease;
+				padding: 8px 0;
+				display: inline-block;
+				white-space: nowrap;
+
+				@media (min-width: 992px) {
+					&:hover {
+						color: $decorColor;
+					}
+				}
+			}
+		}
+	}	
 }
 
-.language {
-	&__select {}
-}

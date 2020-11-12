@@ -1,18 +1,18 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?mu5j68');
-  src:  url('../fonts/icomoon.eot?mu5j68#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?mu5j68') format('truetype'),
-    url('../fonts/icomoon.woff?mu5j68') format('woff'),
-    url('../fonts/icomoon.svg?mu5j68#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?2g7pxf');
+  src:  url('../fonts/icomoon.eot?2g7pxf#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?2g7pxf') format('truetype'),
+    url('../fonts/icomoon.woff?2g7pxf') format('woff'),
+    url('../fonts/icomoon.svg?2g7pxf#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"]:before, [class*=" icon-"]:before {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: 'icomoon';
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -25,6 +25,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-right:before {
+.icon-arrow-down:before {
   content: "\e900";
+}
+.icon-globe:before {
+  content: "\e901";
+}
+.icon-angle-left:before {
+  content: "\f104";
+}
+.icon-angle-right:before {
+  content: "\f105";
 }

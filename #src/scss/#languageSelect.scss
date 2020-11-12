@@ -1,94 +1,166 @@
 //<SELECT (sel+tab)>====================================================================================================
-.select {
-	position: relative;
-	// .select__item
-	&__item {
-		position: relative;
-	}
-	// .select__title
-	&__title {
-		cursor: pointer;
-	}
-	// .select__value
-	&__value {
-		display: flex;
-		font-size: 1.8rem;
-		padding: 0px 0rem 0 2.5rem;
-		align-items: center;
-		justify-content: space-between;
-		flex-direction: row-reverse;
-		position: relative;
-		span {
-			height: 1em;
-			overflow: hidden;
-			display: -webkit-box;
-			-webkit-line-clamp: 1;
-			-webkit-box-orient: vertical;
-		}
-		&:before {
-			content: "";
-			display: inline-block;
-			transition: all 0.3s ease 0s;
-			width: 1.2rem;
-			height: 0.65rem;
-			background: url("../img/icons/arrow-down.svg") center / 100% no-repeat;
-			margin-left: 0.5rem;
+.language {
+	&__select {}
 
+	.select {
+		//padding: 37px 16px;
+		position: relative;
+		transition: all 0.2s ease 0s;
+
+		&._active {
+			background: #000;
+
+			@media (max-width: $md2+px) {
+				background: transparent;
+			}
+
+			& .select__value {
+				& > span {
+					color: $decorColor;
+				}
+
+				&:before {
+					color: $decorColor;
+				}
+
+				&:after {
+					color: $decorColor;
+				}
+			}
 		}
-		&:after {
-			position: absolute;
-			content: '';
-			top: 50%;
-			left: 0;
-			transform: translateY(-50%);
-			background: url("../img/icons/globe.svg") center / 100% no-repeat;
-			height: 1.5rem;
-			width: 1.5rem;
-		}
-	}
-	&__input {
-		width: 100%;
-		background-color: transparent;
-		height: 100%;
-	}
-	// .select__options
-	&__options {
-		color: #000;
-		display: none;
-		position: absolute;
-		top: 3rem;
-		min-width: 100%;
-		left: 0;
-		background-color: $mainColor;
-		border-top: 0;
-		border: 1px solid #979797;
-		letter-spacing: 0.2rem;
-		color: #textColor;
-		font-size: 1.8rem;
-		max-height: 40rem;
-		overflow: auto;
-		text-align: center;
-	}
-	// .select__option
-	&__option {
-		cursor: pointer;
-		padding: 1.5rem;
+
 		@media (min-width: 992px) {
 			&:hover {
-				background: rgba(#fff, 0.1);
+				background: #000;
+				& .select__value {
+					& > span {
+						color: $decorColor;
+					}
+
+					&:before {
+						color: $decorColor;
+					}
+
+					&:after {
+						color: $decorColor;
+					}
+				}
 			}
 		}
-	}
-	&._active {
-		z-index: 5;
-		.select__value {
+		// .select__item
+		&__item {
+			position: relative;
+			padding: 37px 21px 37px 16px;
+
+			@media (max-width: $md2+px) {
+				padding: 37px 21px 16px 16px;
+			}
+
+		}
+		// .select__title
+		&__title {
+			cursor: pointer;
+		}
+		// .select__value
+		&__value {
+			display: flex;
+			font-size: 1.8rem;
+			padding: 0px 0rem 0 2.5rem;
+			align-items: center;
+			justify-content: space-between;
+			flex-direction: row-reverse;
+			position: relative;
+			span {
+				font-family: $mainFontFamily;
+				height: 1em;
+				overflow: hidden;
+				display: -webkit-box;
+				-webkit-line-clamp: 1;
+				-webkit-box-orient: vertical;
+				transition: all 0.2s ease 0s;
+			}
 			&:before {
-				transform: rotate(-180deg);
+				 font-family: 'icomoon';
+				content: "\f105";
+				display: inline-block;
+				transition: all 0.2s ease 0s;
+				//background: url("../img/icons/arrow-down.svg") center / 100% no-repeat;
+				margin-left: 9px;
+				width: 6px;
+				transform: rotate(90deg);
+
+			}
+			&:after {
+				position: absolute;
+				 font-family: 'icomoon';
+				 font-size: 15px;
+				content: "\e901";
+				top: 47%;
+				left: 3px;
+				transform: translateY(-50%);
+				//background: url("../img/icons/globe.svg") center / 100% no-repeat;
+				height: 1.5rem;
+				width: 1.5rem;
+				transition: all 0.2s ease 0s;
 			}
 		}
-		.select__options {
-			display: block;
+		&__input {
+			width: 100%;
+			background-color: transparent;
+			height: 100%;
+		}
+		// .select__options
+		&__options {
+			color: #000;
+			display: none;
+			position: absolute;
+			top: 100%;
+			min-width: 100%;
+			left: 0;
+			background-color: #000;
+			border-top: 0;
+			border: none;
+			letter-spacing: 0.2rem;
+			font-size: 1.8rem;
+			max-height: 40rem;
+			overflow: auto;
+			text-align: center;
+			padding-bottom: 5px;
+
+			@media (max-width: $md2+px) {
+				background-color: transparent;
+			}
+		}
+		// .select__option
+		&__option {
+			cursor: pointer;
+			padding: 6px 6px 11px 7px;
+			font-size: 14px;
+			line-height: 19px;
+			letter-spacing: 0.9px;
+			color: #fff;
+			font-family: $mainFontFamily;
+
+			@media (min-width: 992px) {
+				&:hover {
+					color: $decorColor;
+				}
+			}
+		}
+		&._active {
+			z-index: 5;
+			.select__value {
+				&:before {
+					transform: rotate(-90deg);
+				}
+			}
+			.select__options {
+				display: block;
+			}
 		}
 	}
 }
+
+
+
 //</SELECT>====================================================================================================

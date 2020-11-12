@@ -1,0 +1,309 @@
+.platform {
+	& .container {
+		padding-left: 30px;
+		padding-right: 30px;
+
+
+		@media (max-width: 575+px) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+
+	&__content {
+		margin-top: 154px;
+		margin-bottom: 99px;
+	}
+}
+
+.tabs-block {
+	&__wrap {
+		position: relative;
+
+		@media (max-width: 1230px) {
+			margin: 0 -30px;
+			&:before, &:after {
+				opacity: 1;
+			}
+
+		}
+
+		@media (max-width: 991px) {
+			margin: 0 0px;
+			&:before, &:after {
+				opacity: 0;
+			}
+
+		}
+
+		@media (max-width: 929px) {
+			margin: 0 -30px;
+			&:before, &:after {
+				opacity: 1;
+			}
+
+		}
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 0;
+			width: 60px;
+			height: 80px;
+			transform: translateY(-50%);
+			z-index: 5;
+			transition: all .4s ease;
+			opacity: 0;
+			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#280e09+0,000000+100&1+0,0+100 */
+			background: -moz-linear-gradient(left,  rgba(40,14,9,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(left,  rgba(40,14,9,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right,  rgba(40,14,9,1) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#280e09', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+
+		}
+
+		&:after {
+			position: absolute;
+			content: '';
+			top: 50%;
+			right: 0;
+			width: 60px;
+			height: 80px;
+			transform: translateY(-50%);
+			z-index: 5;
+			transition: all .4s ease;
+			opacity: 0;
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,0e0f11+100&0+0,1+84 */
+		background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(12,13,14,1) 84%, rgba(14,15,17,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(12,13,14,1) 84%,rgba(14,15,17,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(12,13,14,1) 84%,rgba(14,15,17,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#0e0f11',GradientType=1 ); /* IE6-9 */
+
+		}
+	}
+	&__list-wrap {
+		overflow: hidden;
+		margin:0 auto;
+		display:block;
+		position:relative;
+		transition: all .4s ease;
+
+
+		&._mobile {
+			overflow-x: auto;
+		}
+	}
+
+	&__list {
+		width: 870px;
+		display: flex;
+
+		@media (max-width: 1230px) {
+			width: 930px;
+			padding: 0 30px;
+		}
+
+		@media (max-width: 991px) {
+			padding: 0;
+			width: 870px;
+
+		}
+
+		@media (max-width: 929px) {
+			width: 930px;
+			padding: 0 30px;
+		}
+
+		& > li {
+			flex: 0 1 25%;
+
+			&:first-child {
+				& .tabs-block__triggers {
+					border-left: 1px solid #fff;
+				}
+			}
+		}
+	}
+	&__triggers {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 80px;
+		width: 100%;
+		border-top: 1px solid #fff;
+		border-right: 1px solid #fff;
+		border-bottom: 4px solid #fff;
+		font-family: $seconFontFamily;
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 26px;
+		display: flex;
+		color: #F8F8F8;
+		position: relative;
+		transition: all .2s ease;
+		background:  #101010;
+		& > strong {
+			font-weight: 800;
+			pointer-events: none;
+		}
+
+		@media (min-width: 992px) {
+			&:hover {
+				color: $mainColor;
+				background: #E3B04B;
+				border-color: #E3B04B !important;
+			}
+		}
+
+		&.active {
+			color: $mainColor;
+			background: #E3B04B;
+			border-color: #E3B04B !important;
+		}
+	}
+	&__content {
+		display: none;
+		margin-top: 25px;
+
+		&#tab-3,&#tab-4 {
+			margin-bottom: 150px;
+		}	
+
+		& p {
+			font-family: $seconFontFamily;
+			font-weight: 300;
+			font-size: 15px;
+			line-height: 1.343em;
+			color: #F8F8F8;
+			margin-bottom: 0.666em;
+		}
+
+		& .block-text-img__text {
+		    width: 83%;
+
+		    @media (max-width: $md3+px) {
+		    	width: 100%;
+		    	text-align: center;
+		    }
+		}
+
+		& .block-text-img__img {
+			top: 0;
+			transform: translateY(-3%);
+			width: 32%;
+
+			& img {
+				max-width: 100%;
+				width: auto;
+			}
+
+			@media (max-width: $md3+px) {
+				display: none;
+			}
+		}
+
+		&.active {
+			display: block;
+		}
+	}
+
+	&__btn-wrap {
+		margin-top: 24px;
+
+		@media (max-width: $md3+px) {
+			margin-top: 50px;
+		}
+	}
+}
+
+
+
+
+
+
+.btn-windows {
+	display: inline-flex;
+	font-family: $seconFontFamily;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 0.777em;
+	color: #F8F8F8;
+	align-items: center;
+	padding: 0.614em 1.614em;
+	border: 1px solid #fff;
+	border-bottom: 4px solid #fff;
+	background: $mainColor;
+
+	& > span {
+		width: 1.357em;
+		margin-right: 0.714em;
+
+		& img {
+			width: 100%;
+		}
+	}
+}
+
+
+.btn-apple {
+	display: inline-flex;
+	align-items: center;
+	font-weight: $seconFontFamily;
+	font-size: 10px;
+	border:1px solid #fff;
+	border-radius: 0.7em;
+	background: $mainColor;
+	color: #fff;
+	padding: 0.6em	0.6em;
+
+	& > span {
+		width: 1.7em;
+		margin-right: 0.75em;
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	& > div {
+		font-size: 1.8em;
+		& > span {
+			display: block;
+			font-size: 0.5em;
+			opacity: 0.6
+		}
+	}
+}
+
+
+.btn-android {
+	display: inline-flex;
+	align-items: center;
+	font-weight: $seconFontFamily;
+	font-size: 10px;
+	border:1px solid #fff;
+	border-radius: 0.4em;
+	background: $mainColor;
+	color: #fff;
+	padding: 0.6em	0.6em;
+
+	& > span {
+		width: 2.7em;
+		margin-right: 0.65em;
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	& > div {
+		font-size: 1.6em;
+		& > span {
+			display: block;
+			font-size: 0.5em;
+			text-transform: uppercase;
+			opacity: 0.6
+		}
+	}
+}

@@ -1,0 +1,78 @@
+.analytics {
+
+	&__content {
+		margin: 120px 0 85px;
+
+		@media (max-width: $md2+px) {
+			margin-top: 176px;
+		}
+
+		@media (max-width: $md3+px) {
+			margin-top: 110px;
+		}
+
+		& h2 {
+			//margin-bottom: .3433em;
+		}
+	}
+
+	& .block-text-img {
+		& .block-text-img__img {
+			width: 41%;
+		}
+		& .block-text-img__text {
+			width: 74%;
+		}
+	}
+
+	&_technical {
+
+		@media (max-width: $md2+px) {
+			& .block-text-img {
+				& .block-text-img__img {
+					width: 31%;
+					top: -32%;
+				}
+				& .block-text-img__text {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&_economic {
+		& .list-column-3 {
+			& .icon {
+				height: 6.6em;
+			}
+
+			@media (max-width: $md3+px) {
+				& > li {
+					display: flex;
+					align-items: center;
+
+					& .icon {
+						flex: 0 0 7em;
+						margin-right: 2em;
+					}
+
+					& .text {
+						text-align: left;
+					}
+				}
+			}
+		}
+
+		@media (max-width: $md2+px) {
+			& .block-text-img {
+				& .block-text-img__img {
+					width: 31%;
+					top: -32%;
+				}
+				& .block-text-img__text {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

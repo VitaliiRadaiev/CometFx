@@ -1,0 +1,174 @@
+.about-us {
+	&_who-we-are {}
+	&_partnership {
+		& .block-text-img {
+			margin-bottom: 5em;
+
+			& .block-text-img__text {
+				width: 56%;
+			}
+
+			& .block-text-img__img {
+				width: 40%;
+			}
+		}
+
+		& .list-column-2 {
+			margin: 0 !important;
+			& > li {
+				display: block;
+
+				& .icon {
+					margin-bottom: 0.5em;
+				}
+			}
+		}
+	}
+	&__content {
+		margin: 130px 0 104px;
+
+		@media (max-width: $md2+px) {
+			margin: 160px 0 90px;
+		}
+		@media (max-width: $md3+px) {
+			margin: 130px 0 90px;
+		}
+
+		& h2 {
+			text-transform: uppercase;
+		}
+
+		& .list-column-2 {
+
+			& > li {
+				align-items: center;
+			}
+		}
+	}
+}
+
+.contact-us {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 2.6em 0;
+	font-size: 10px;
+	max-width: 870px;
+
+	@media (max-width: $md3+px) {
+		display: block;
+	}
+
+	@media (max-width: 575px) {
+		font-size: 7px;
+	}
+
+	&__item {
+		flex: 1 1 auto;
+		margin-bottom: 2.7em;
+
+		&:nth-child(even) {
+			padding-left: 11%;
+			display: flex;
+			flex-direction: column;
+
+			& .contact-us__item-inner {
+				width: 100%;
+				max-width: 369px;
+				margin-left: auto;
+			}
+
+			@media (max-width: $md3+px) {
+				padding-left: 0;
+				max-width: none;
+
+				& .contact-us__item-inner {
+					max-width: none;
+				}
+			}
+		}
+	}
+	&__input {
+		max-width: 18.4em;
+
+		@media (max-width: $md3+px) {
+			max-width: none;
+		}
+	}
+	&__item_textarea {
+		flex: 0 1 100%;
+		max-width: none;
+		max-width: 869px;
+	}
+	&_textarea {}
+	&__label {
+		display: block;
+		font-family: $seconFontFamily;
+		font-weight: 300;
+		font-size: 2em;
+		line-height: 1.3em;
+		display: flex;
+		color: #F8F8F8;
+		padding: 0 0.6em .3em;
+	}
+
+	&__submit-wrap {
+		flex: 0 1 100%;
+		margin-top: 2em;
+	}
+	&__submit {
+		font-size: 1.2em;
+
+		@media (max-width: $md3+px) {
+			width: 100%;
+		}
+	}
+
+	& .input {
+		min-height: 2.5em;
+		border: 1px solid $decorColor;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		padding: 0.5em 1em;
+
+		font-family: $seconFontFamily;
+		font-weight: 300;
+		font-size: 2em;
+		line-height: 1.3em;
+		color: #F8F8F8;
+
+		&:focus {
+			font-family: $seconFontFamily;
+			font-weight: 300;
+			font-size: 2em;
+			line-height: 1.3em;
+			color: #F8F8F8;
+		}
+	}
+	& .textearea {
+		min-height: 6.3em;
+		border: 1px solid $decorColor;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		padding: 0.5em 1em;
+		resize: vertical;
+		background: transparent;
+		font-family: $seconFontFamily;
+		font-weight: 300;
+		font-size: 2em;
+		line-height: 1.3em;
+		color: #F8F8F8;
+
+		&:focus {
+			font-family: $seconFontFamily;
+			font-weight: 300;
+			font-size: 2em;
+			line-height: 1.3em;
+			color: #F8F8F8;
+		}
+	}
+
+}
+
