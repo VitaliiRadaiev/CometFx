@@ -515,9 +515,9 @@ function selects_update_all() {
 			mySwiper = new Swiper(slider.querySelector('.swiper-container'), {
 			slidesPerView:1,
 			speed: 600,
-			autoplay: {
-			  delay: 8000,
-			},
+			// autoplay: {
+			//   delay: 8000,
+			// },
 			spaceBetween: 35,
 			pagination: {
 			    el: slider.querySelector('.swiper-pagination'),
@@ -598,17 +598,17 @@ function selects_update_all() {
 
 			slider.querySelectorAll('.swiper-slide').forEach((item) => {
 				let height = item.clientHeight;
-				item.style.maxHeight = '415px';
+				item.style.maxHeight = '350px';
 				slider.querySelector('.swiper-wrapper').style.height = 'auto';
 				let btn = item.querySelector('.aside-slider__read-all');
 				btn.addEventListener('click', function() {
 					if(item.classList.contains('is-open')) { 
-						item.style.maxHeight = '415px';
+						item.style.maxHeight = '350px';
 						item.classList.remove('is-open');
 						btn.innerText = "Read All";
 						slider.querySelector('.swiper-wrapper').style.height = 'auto';
 					} else {
-						if(height < 415) {
+						if(height < 350) {
 							let height2 = item.clientHeight;
 							console.log(height);
 							console.log(height2);
