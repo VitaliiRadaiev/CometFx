@@ -162,6 +162,11 @@
 		@media (min-width: 992px) {
 			display: none;
 		}
+
+		@media (max-width: $md3+px) {
+			margin-top: 0.7em;
+			margin-right: 1em;
+		}
 	}
 }
 

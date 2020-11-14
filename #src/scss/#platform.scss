@@ -17,6 +17,7 @@
 }
 
 .tabs-block {
+	min-height: 320px;
 	&__wrap {
 		position: relative;
 
@@ -165,6 +166,7 @@
 	&__content {
 		display: none;
 		margin-top: 25px;
+		animation: tabsFadeUp .8s ease;
 
 		&#tab-3,&#tab-4 {
 			margin-bottom: 150px;
@@ -218,7 +220,17 @@
 }
 
 
+@keyframes tabsFadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(50%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0%);
 
+	}
+}
 
 
 
