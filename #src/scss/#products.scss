@@ -62,6 +62,17 @@
 				& ul > li {
 					margin-bottom: 0em;
 				}
+
+				& > .block-text-img {
+						& .block-text-img__img {
+							& img {
+								width: 115%;
+								max-width: 115%;
+							}
+						}
+				}
+
+
 			}
 
 		}

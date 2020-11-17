@@ -353,16 +353,16 @@
 	&__title {
 		font-family: $seconFontFamily;
 		font-weight: 300;
-		font-size: 2rem;
+		font-size: 1.8rem;
 		line-height: 1.3em;
-		margin-bottom: 1.8rem;
+		margin-bottom: 1.6rem;
 	}
 
 	&__text {
 		font-family: $seconFontFamily;
 		font-weight: 300;
-		font-size: 1.6rem;
-		line-height: 1.32em;
+		font-size: 1.4rem;
+		line-height: 1.52em;
 		padding: 0 1.5rem;
 		margin: 1px 0;
 	}
@@ -669,6 +669,11 @@
 
 		& > li {
 			padding: 2.5rem 5.5rem;
+
+			&:nth-child(2) {
+				min-height: 114px;
+			}
+
 			&:not(:last-child) {
 				border-bottom: 2px solid #000;
 				padding-bottom: 2.4rem;
