@@ -1048,13 +1048,30 @@ table {
 				margin-right: 3.333em;
 			}
 
+			&:nth-child(2) {
+				& span {
+					padding-top: 2px;
+				}
+			}
+
 			& > a {
 				font-size: 1em;
-				display: inline-block;
+				display: inline-flex;
 				width: 3.333em;	
 				height: 3.333em;
 				border-radius: 50%;
 				transition: all .2s ease;
+				border: 1px solid $decorColor;
+				justify-content: center;
+				align-items: center;
+
+				& > span {
+					height: 1.8em;
+
+					& img {
+						height: 100%;
+					}
+				}
 				@media (min-width: 992px) {
 					&:hover {
 						background: rgba($decorColor, 0.2);
