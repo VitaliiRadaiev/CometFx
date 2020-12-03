@@ -25,13 +25,20 @@
 		}
 	}
 	&__content {
-		margin: 130px 0 104px;
+		margin-top: 58px;
+		margin-bottom: 104px;
 
 		@media (max-width: $md2+px) {
-			margin: 160px 0 90px;
+			margin-top: 125px;
+			margin-bottom: 87px;
 		}
-		@media (max-width: $md3+px) {
-			margin: 130px 0 90px;
+		// @media (max-width: $md3+px) {
+		// 	margin-top: 243px;
+		// 	margin-bottom: 118px;
+		// }
+		@media (max-width: 575+px) {
+			margin-top: 110px;
+			margin-bottom: 50px;
 		}
 
 		& h2 {

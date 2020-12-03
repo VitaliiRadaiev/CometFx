@@ -1,27 +1,27 @@
 .news {
 	&__content {
-		margin: 120px 0 85px;
+		margin: 58px 0 85px;
 
 		& h2 {
-			font-size: 30px;
+			font-size: 28px;
 			line-height: 1.166em;
 			margin-bottom: 0.5433em;
 			font-weight: 400;
 		}
 
 		@media (max-width: $md2+px) {
-			margin-top: 176px;
-		}
-
-		@media (max-width: $md3+px) {
-			margin-top: 110px;
+			margin-top: 125px;
 		}
 
 		@media (max-width: 575px) {
+			margin-top: 110px;
+			margin-bottom: 50px;
 			& h2 {
 				text-align: center;
 			}
 		}
+
+
 	}
 }
 

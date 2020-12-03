@@ -973,8 +973,8 @@ div.scrollableArea {
 
 .container {
   max-width: 930px;
-  margin: 0 auto;
-  padding: 0 15px;
+  margin: 0;
+  padding: 0 30px;
 }
 
 .ibg {
@@ -1091,10 +1091,10 @@ button.btn-default:active {
 }
 
 .text-content h2 {
-  font-size: 3em;
+  font-size: 2.8em;
   line-height: 1.166em;
   margin-bottom: 0.5433em;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .text-content h2 > strong {
@@ -1552,6 +1552,10 @@ table td:last-child {
 .social__list > li > a img {
   width: 100%;
   height: 105%;
+}
+
+.iframe-container {
+  margin: 50px 0 50px;
 }
 
 /**
@@ -3013,6 +3017,7 @@ textarea.input {
   padding: 8px 0;
   display: inline-block;
   white-space: nowrap;
+  text-transform: capitalize;
 }
 
 .home__cards {
@@ -3589,6 +3594,7 @@ textarea.input {
   line-height: 1.3em;
   height: 30px;
   white-space: nowrap;
+  text-transform: capitalize;
 }
 
 .price-card__list > li {
@@ -3755,11 +3761,10 @@ textarea.input {
   display: -ms-flexbox;
   display: flex;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 -8px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 10px;
 }
 
 .product-block__cards-item {
@@ -3848,7 +3853,6 @@ textarea.input {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 8px;
-  padding-left: 15px;
 }
 
 .steps-block__head * {
@@ -3895,6 +3899,7 @@ textarea.input {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-left: -15px;
 }
 
 .steps-block__item {
@@ -3950,7 +3955,7 @@ textarea.input {
 }
 
 .product__content {
-  margin-top: 138px;
+  margin-top: 58px;
   margin-bottom: 67px;
 }
 
@@ -3994,7 +3999,7 @@ textarea.input {
 }
 
 .platform__content {
-  margin-top: 154px;
+  margin-top: 58px;
   margin-bottom: 99px;
 }
 
@@ -4299,7 +4304,8 @@ textarea.input {
 }
 
 .analytics__content {
-  margin: 120px 0 85px;
+  margin-top: 58px;
+  margin-bottom: 67px;
 }
 
 .analytics .block-text-img .block-text-img__img {
@@ -4327,11 +4333,11 @@ textarea.input {
 }
 
 .news__content {
-  margin: 120px 0 85px;
+  margin: 58px 0 85px;
 }
 
 .news__content h2 {
-  font-size: 30px;
+  font-size: 28px;
   line-height: 1.166em;
   margin-bottom: 0.5433em;
   font-weight: 400;
@@ -4684,7 +4690,8 @@ textarea.input {
 }
 
 .insights__content {
-  margin: 151px 0 90px;
+  margin-top: 58px;
+  margin-bottom: 87px;
 }
 
 .insights_e-boock .block-text-img .block-text-img__img {
@@ -4994,7 +5001,8 @@ textarea.input {
 }
 
 .about-us__content {
-  margin: 130px 0 104px;
+  margin-top: 58px;
+  margin-bottom: 104px;
 }
 
 .about-us__content h2 {
@@ -5136,7 +5144,8 @@ textarea.input {
 }
 
 .text__content {
-  margin: 155px 0 90px;
+  margin-top: 58px;
+  margin-bottom: 67px;
 }
 
 .text__content .container h4 {
@@ -5199,7 +5208,6 @@ textarea.input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 10px;
 }
 
 .footer__top .item {
@@ -5280,7 +5288,6 @@ textarea.input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 15px;
   margin-top: -3px;
 }
 
@@ -5717,9 +5724,18 @@ textarea.input {
   .menu {
     font-size: 8px;
   }
+
+  .product .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 @media (max-width: 1200px) {
+  .container {
+    padding: 0 24px;
+  }
+
   .advantages__text-block:nth-child(1):before {
     left: 234px;
     top: 13px;
@@ -5762,6 +5778,10 @@ textarea.input {
 
   .main {
     margin-left: 0;
+  }
+
+  .container {
+    margin: 0 auto;
   }
 
   .title-3 {
@@ -5967,12 +5987,18 @@ textarea.input {
   }
 
   .product__content {
-    margin-top: 188px;
+    margin-top: 125px;
     margin-bottom: 87px;
   }
 
+  .platform__content {
+    margin-top: 125px;
+    margin-bottom: 99px;
+  }
+
   .analytics__content {
-    margin-top: 176px;
+    margin-top: 125px;
+    margin-bottom: 87px;
   }
 
   .analytics_technical .block-text-img .block-text-img__img {
@@ -5994,7 +6020,7 @@ textarea.input {
   }
 
   .news__content {
-    margin-top: 176px;
+    margin-top: 125px;
   }
 
   .mews-detail__come-back {
@@ -6002,11 +6028,18 @@ textarea.input {
   }
 
   .insights__content {
-    margin: 174px 0 90px;
+    margin-top: 125px;
+    margin-bottom: 87px;
   }
 
   .about-us__content {
-    margin: 160px 0 90px;
+    margin-top: 125px;
+    margin-bottom: 87px;
+  }
+
+  .text__content {
+    margin-top: 125px;
+    margin-bottom: 87px;
   }
 
   .footer {
@@ -6213,10 +6246,6 @@ textarea.input {
     font-size: 1.6rem;
   }
 
-  .block-cards .container {
-    padding: 0 30px;
-  }
-
   .block-cards__body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -6327,11 +6356,6 @@ textarea.input {
     padding-right: 33px;
   }
 
-  .product__content {
-    margin-top: 243px;
-    margin-bottom: 118px;
-  }
-
   .tabs-block__content .block-text-img__text {
     width: 100%;
     text-align: center;
@@ -6343,10 +6367,6 @@ textarea.input {
 
   .tabs-block__btn-wrap {
     margin-top: 50px;
-  }
-
-  .analytics__content {
-    margin-top: 110px;
   }
 
   .analytics_economic .list-column-3 > li {
@@ -6367,10 +6387,6 @@ textarea.input {
 
   .analytics_economic .list-column-3 > li .text {
     text-align: left;
-  }
-
-  .news__content {
-    margin-top: 110px;
   }
 
   .news-list > li {
@@ -6395,10 +6411,6 @@ textarea.input {
 
   .mews-detail .container {
     margin-top: 5em;
-  }
-
-  .insights__content {
-    margin: 165px 0 70px;
   }
 
   .insights_e-boock .block-text-img .block-text-img__img {
@@ -6472,10 +6484,6 @@ textarea.input {
     padding-left: 3em;
   }
 
-  .about-us__content {
-    margin: 130px 0 90px;
-  }
-
   .contact-us {
     display: block;
   }
@@ -6520,6 +6528,10 @@ textarea.input {
 }
 
 @media (max-width: 575px) {
+  .container {
+    padding: 0 15px;
+  }
+
   .text-content {
     font-size: 7px;
   }
@@ -6573,6 +6585,21 @@ textarea.input {
     padding-right: 15px;
   }
 
+  .platform__content {
+    margin-top: 110px;
+    margin-bottom: 99px;
+  }
+
+  .analytics__content {
+    margin-top: 110px;
+    margin-bottom: 50px;
+  }
+
+  .news__content {
+    margin-top: 110px;
+    margin-bottom: 50px;
+  }
+
   .news__content h2 {
     text-align: center;
   }
@@ -6589,6 +6616,11 @@ textarea.input {
     padding-right: 15px;
   }
 
+  .insights__content {
+    margin-top: 110px;
+    margin-bottom: 50px;
+  }
+
   .info-block {
     font-size: 7px;
   }
@@ -6601,8 +6633,18 @@ textarea.input {
     font-size: 7px;
   }
 
+  .about-us__content {
+    margin-top: 110px;
+    margin-bottom: 50px;
+  }
+
   .contact-us {
     font-size: 7px;
+  }
+
+  .text__content {
+    margin-top: 110px;
+    margin-bottom: 50px;
   }
 
   .text__content .container ul li {
