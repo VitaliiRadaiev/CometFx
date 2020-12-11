@@ -96,6 +96,14 @@ img {
 // 	font-size: inherit;
 // }
 
+.tradingview-widget-container {
+	height: 700px !important;
+
+	@media (max-width: $md3+px) {
+		height: 500px !important;
+	}
+}
+
 div.scrollWrapper
 {
 	position: relative;
@@ -409,7 +417,7 @@ div.scrollableArea
 
 .container {
 	max-width: 930px;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0 30px;
 
 	@media (max-width: 1200px) {
