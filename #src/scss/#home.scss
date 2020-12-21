@@ -669,10 +669,20 @@
 	&__list {
 
 		& > li {
-			padding: 2.5rem 5.5rem;
+			padding: 2.5rem 4.5rem;
+			&:nth-child(1) {
+				min-height: 59px;
+				@media (max-width: $md3+px) {
+					min-height: auto;
+				}
+			}
 
 			&:nth-child(2) {
 				min-height: 114px;
+
+				@media (max-width: $md3+px) {
+					min-height: auto;
+				}
 			}
 
 			&:not(:last-child) {

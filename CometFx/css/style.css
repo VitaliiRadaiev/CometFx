@@ -815,6 +815,7 @@ div.scrollableArea {
   width: 285px;
   position: fixed;
   z-index: 52;
+  color: #fff;
 }
 
 .aside__close {
@@ -3602,7 +3603,11 @@ textarea.input {
 }
 
 .price-card__list > li {
-  padding: 2.5rem 5.5rem;
+  padding: 2.5rem 4.5rem;
+}
+
+.price-card__list > li:nth-child(1) {
+  min-height: 59px;
 }
 
 .price-card__list > li:nth-child(2) {
@@ -6274,6 +6279,14 @@ textarea.input {
 
   .price-card {
     max-width: none;
+  }
+
+  .price-card__list > li:nth-child(1) {
+    min-height: auto;
+  }
+
+  .price-card__list > li:nth-child(2) {
+    min-height: auto;
   }
 
   .advantages__body {
