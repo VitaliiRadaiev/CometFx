@@ -49,7 +49,6 @@ function select_item(select) {
 	const select_selected_option = select.querySelector('option:checked');
 	const select_selected_text = select_selected_option.text;
 	const select_type = select.getAttribute('data-type');
-	console.log(select_selected_option.value)
 
 	if (select_items) {
 		select_items.remove();
@@ -155,5 +154,50 @@ function selects_update_all() {
 			const select = selects[index];
 			select_item(select);
 		}
+	}
+}
+
+
+
+
+
+{
+	let language = document.querySelector('.language');
+	if(language) {
+		let list = document.querySelector('.language__list')
+		language.addEventListener('click', (e) => {
+			language.classList.toggle('_active');
+			_slideToggle(list)
+
+			if(e.target.closest('.language__item')) {
+				e.target.classList.add('_active');
+				let title = document.querySelector('.language__title > span');
+				title.innerText = e.target.dataset.value;
+				
+				for(let el of list.children) {
+					
+					if(el == e.target) {
+						continue
+					}
+					el.classList.remove('_active');
+				}
+				//selectLang()
+			}
+		})
+
+		function selectLang() {
+			let item = list.querySelector('.language__item._active');
+			let title = document.querySelector('.language__title > span');
+			title.innerText = item.dataset.value;
+
+			for(let el of list.children) {
+				if(el = item) {
+					continue
+				}
+				el.classList.remove('_active');
+			}
+
+		}
+		selectLang();
 	}
 }

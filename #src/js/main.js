@@ -391,6 +391,7 @@ $(document).ready(function () {
 
 	//Spollers
 	function runSpoller() {
+
 		let spollers = document.querySelectorAll("._spoller");
 		if (spollers.length > 0) {
 			for (let index = 0; index < spollers.length; index++) {
@@ -405,15 +406,21 @@ $(document).ready(function () {
 					}
 					if (spoller.closest('._spollers').classList.contains('_one')) {
 						let curent_spollers = spoller.closest('._spollers').querySelectorAll('._spoller');
+
+						
 						for (let i = 0; i < curent_spollers.length; i++) {
 							let el = curent_spollers[i];
+
+							
 							if (el != spoller) {
 								el.classList.remove('_active');
+								
 								_slideUp(el.nextElementSibling);
 							}
 						}
 					}
 					spoller.classList.toggle('_active');
+					
 					_slideToggle(spoller.nextElementSibling);
 				});
 			}
@@ -532,7 +539,7 @@ $(document).ready(function () {
 				renderer: 'svg',
 				loop: true,
 				autoplay: true,
-				path: 'https://vitaliiradaiev.github.io/CometFx-page/img/CometFX-Logo.json' // the path to the animation json
+				path: logo.dataset.logourl // the path to the animation json
 			});
 		}
 
@@ -543,7 +550,7 @@ $(document).ready(function () {
 				renderer: 'svg',
 				loop: true,
 				autoplay: true,
-				path: 'https://vitaliiradaiev.github.io/CometFx-page/img/CometFX-Logo.json' // the path to the animation json
+				path: logo.dataset.logourl // the path to the animation json
 			});
 		}
 	}
@@ -584,7 +591,6 @@ $(document).ready(function () {
 			item.addEventListener('click', function (e) {
 				e.preventDefault();
 				const id = e.target.getAttribute('href').replace('#', '');
-				console.log(id)
 				document.querySelectorAll('.tabs-block__triggers').forEach((child) => {
 					child.classList.remove('active');
 				});

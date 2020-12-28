@@ -141,7 +141,7 @@
 		margin-left: auto;
 
 		@media (max-width: $md2+px) {
-			margin-left: 10px;
+			margin-left: -3px;
 		}
 	}
 	&__close {
@@ -266,10 +266,10 @@
 		padding: 9px 19px 10px;
 		transform: translateY(20px);
 		transition: all .4s ease;
-		pointer-events: none;
-
+		
 		@media (min-width: 992px) {
 			display: block !important;
+			pointer-events: none;
 		}
 
 		@media (max-width: $md2+px) {
