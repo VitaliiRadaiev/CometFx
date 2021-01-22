@@ -648,6 +648,16 @@ button.btn-default {
 			font-weight: 700;
 			color: #F8F8F8;
 		}
+
+		& > a {
+			color: $decorColor;
+
+			@media (min-width: 992px) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
 	}
 
 	& ol {

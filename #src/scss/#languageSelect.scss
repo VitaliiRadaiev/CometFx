@@ -18,6 +18,7 @@
 
 			& > span {
 				color: $decorColor;
+
 			}
 
 			&:before {
@@ -215,6 +216,7 @@
 			-webkit-line-clamp: 1;
 			-webkit-box-orient: vertical;
 			transition: all 0.2s ease 0s;
+			text-transform: uppercase;
 		}
 		&:before {
 			 font-family: 'icomoon';

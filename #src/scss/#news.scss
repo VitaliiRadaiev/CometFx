@@ -37,6 +37,10 @@
 		margin-bottom: 23px !important;
 		max-width: 300px;
 
+		&:before {
+			display: none;
+		}
+
 		@media (max-width: $md3+px) {
 			flex: 0 1 50%;
 			max-width: none;

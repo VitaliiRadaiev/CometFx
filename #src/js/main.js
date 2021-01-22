@@ -512,17 +512,21 @@ $(document).ready(function () {
 		let statement = document.querySelector('.statement__inner');
 		if (statement) {
 			let btn = statement.querySelector('.statement__btn-close');
+			let text = statement.querySelector('.statement__btn-close').dataset.readall;
+			let text2 = statement.querySelector('.statement__btn-close').dataset.close;
+			
+			
 			if (btn) {
 				btn.addEventListener('click', function () {
 
 					if (statement.classList.contains('is-open')) {
 						statement.style.maxHeight = '163px';
 						statement.classList.remove('is-open');
-						btn.innerText = "Read All";
+						btn.innerText = text;
 					} else {
 						statement.style.maxHeight = statement.scrollHeight + 'px';
 						statement.classList.add('is-open');
-						btn.innerText = "Close";
+						btn.innerText = text2;
 					}
 
 				})

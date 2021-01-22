@@ -175,6 +175,9 @@ function selects_update_all() {
 				title.innerText = e.target.dataset.value;
 				
 				for(let el of list.children) {
+					console.log(el);
+					console.log(e.target);
+					
 					
 					if(el == e.target) {
 						continue
